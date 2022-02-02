@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/subjects")
 @AllArgsConstructor
-public class SubjectController {
+public class    SubjectController {
     private final SubjectService subjectService;
     private final SubjectMapper subjectMapper;
 

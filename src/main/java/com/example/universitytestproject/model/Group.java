@@ -1,6 +1,7 @@
 package com.example.universitytestproject.model;
 
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.EnumType;
@@ -42,5 +43,18 @@ public class Group {
         this.speciality = speciality;
         this.professors = professors;
         this.weekSchedule = weekSchedule;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Group group = (Group) o;
+        return Objects.equals(id, group.id) && speciality == group.speciality && Objects.equals(professors, group.professors) && Objects.equals(weekSchedule, group.weekSchedule);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, speciality, professors, weekSchedule);
     }
 }

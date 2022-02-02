@@ -34,7 +34,8 @@ data after run app into a database and for start you have in db:
 ***
 #### How to run app: 
 1. Clone from GitHub
-2. Use docker-compose up -d to run app. 
-3. Use mentioned above endpoints
+2. Use mvn clean package for build target repository
+3. Use docker-compose up -d to run app 
+4. Use mentioned above endpoints
 #### UML diagram of relations between entities: 
 ![diagram](universityEntity.png)

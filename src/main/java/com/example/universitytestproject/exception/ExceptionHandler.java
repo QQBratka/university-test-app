@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 
 @ControllerAdvice
 public class ExceptionHandler {
-
     @org.springframework.web.bind.annotation.ExceptionHandler(value = {RequestException.class})
     public ResponseEntity<Object> handleApiRequestException(RequestException e) {
         Map<String, Object> body = new LinkedHashMap<>();
